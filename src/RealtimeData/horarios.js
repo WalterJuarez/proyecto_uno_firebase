@@ -4,24 +4,28 @@ import React from "react";
 import {ref, onValue} from 'firebase/database';
 import { Table } from 'react-bootstrap';
 
+
+
 const db = StartFirebase();
-
-
-
+   
 export class InformacionHorarios extends React.Component{
-
-    constructor(){
-        super();
+    
+   
+    constructor(props){
+      super(props);
         this.state = {
-            tableData: []
+            tableData: [],
+            selectedValue:""
         }
-    }
+               
+    }    
     
-        
-    
+
     componentDidMount(){
-        const jornada = ('jornada-uno');    
-        const dbRef = ref(db, `horario-encuentros/grupo-a/${jornada}`);
+        
+        const dbRef = ref(db, `horario-encuentros/grupo-a/${this.state.selectedValue}`);
+        
+        
         console.log(dbRef);
 
         onValue(dbRef, (snapshot)=>{
@@ -36,12 +40,20 @@ export class InformacionHorarios extends React.Component{
     }
 
     render(){
+        const handleChange =(e)=>{
+            this.setState({selectedValue: e.target.value})
+        }
         return(            
             <div>
                 <div>
-                    <select name="grupos" id="cmbgrupos">
-                        <option value={'opcion1'}>jornada-uno</option>
-                    </select>
+                <label>Jornada</label>
+                  <select onChange={(e)=>handleChange(e)}>
+                    <option value="jornada-uno">1</option>
+                    <option value="jornada-dos">2</option>
+                    <option value="jornada-tres">3</option>
+                    <option value="jornada-cuatro">4</option>
+                  </select>
+                  <h1>elegiste {this.state.selectedValue}</h1>
                 </div>
             <Table className="container w-75" bordered striped>
                 <thead>
