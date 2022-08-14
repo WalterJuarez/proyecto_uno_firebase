@@ -15,7 +15,7 @@ export class InformacionHorarios extends React.Component{
       super(props);
         this.state = {
             tableData: [],
-            selectedValue:""
+            selectedValue:"jornada-dos"
         }
                
     }    
