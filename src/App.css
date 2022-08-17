@@ -37,12 +37,66 @@
     }
 }
 
-p {
-    font-size: 30pts;
-    font-family: 'Times New Roman';
-    font-style: italic;
-}
 
 a {
-    font-size: 10pt;
+    font-size: 15pt;
+    background-color: #eef3f4;
+}
+p {
+    background: #61dafb;
+    opacity: 0.9;
+    color: rgb(254, 251, 251);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Algerian';
+}
+th{
+    background: #ffffff;
+    font-size: 35px;
+
+}
+table{
+    background-color: rgb(253, 249, 249);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   width: 100%;
+    margin: 15 auto;
+    height: 300px;
+   background-image: (90deg, #eef3f4, #ffffff);
+    opacity: 0.7;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(img/fondo.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    margin: 15 auto;
+    height: 500px;
+    
+}
+
+td{
+
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-style: 'Alergian';
+}
+label{
+    background: #ffffff;
+    color: rgba(10, 9, 9,100  100%);
+    font-style :'Negrita';
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-style :'Negrita';
+
+}
+ul{
+    color:black;
 }
