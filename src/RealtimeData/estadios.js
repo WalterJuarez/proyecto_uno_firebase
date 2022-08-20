@@ -35,12 +35,9 @@ export class InformacionEstadios extends React.Component{
                         <tr>                
                             <th>Nombre</th>
                             <th>Capacidad</th>
-
                         </tr>
                     </thead>
-
                     <tbody>
-
                         {this.state.tableData.map((row, index) => {
                             return (
                                 <tr>
